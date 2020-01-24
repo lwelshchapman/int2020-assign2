@@ -32,11 +32,11 @@ int main(int argc, char **argv) {
 	
 	
 	// TEST THE FUNCTION
-	cout << "Price before tax:\t" << demoSubtotal << endl;
+	cout << "Price before tax:\t" << demoSubtotal << endl;	// Output initial price
 	
-	demoTotal = addTax(demoSubtotal, demoTaxRate);
+	demoTotal = addTax(demoSubtotal, demoTaxRate);	// Calculate total price
 
-	cout << "Price after tax:\t" << demoTotal << endl;
+	cout << "Price after tax:\t" << demoTotal << endl;	// Output total price
 
 
 

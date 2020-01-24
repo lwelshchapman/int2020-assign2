@@ -29,7 +29,7 @@ int main(int argc, char **argv) {
 	// GET VALUES FROM USER
 	for(int i = 0; i < A_X; ++i) {
 		for(int j = 0; j < A_Y; ++j) {
-			cin >> a[i][j];
+			cin >> a[i][j];	// Use cin to store each integer separated by whitespace into the 2d array. Starts at a[0][0], fills each row then moves to next
 		}
 	}
 
@@ -38,7 +38,7 @@ int main(int argc, char **argv) {
 	cout << endl;
 	for(int i = 0; i < A_X; ++i) {
 		for(int j = 0; j < A_Y; ++j) {
-			cout << a[i][j] << ' ';
+			cout << a[i][j] << ' ';	// Print a line of values for each row
 		}
 		cout << endl;
 	}

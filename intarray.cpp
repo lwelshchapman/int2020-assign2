@@ -29,17 +29,17 @@ int main(int argc, char **argv) {
 		
 		bool keepAsking = true;
 		
-		while (keepAsking) {
+		while (keepAsking) {	// For each index in the array, will continue to prompt for an int until a valid one is given
 			cout << "Index " << i << ": ";
 
 			int intIn;
 			cin >> intIn;
 			
-			if (intIn >= 0) {
+			if (intIn >= 0) {	// If the given int is non-negative, store to array and continue...
 				numberArray[i] = intIn;
 				keepAsking = false;
 			}
-			else {
+			else {	// ...if the given int is negative, inform user and ask for another int
 				cout << "This array only accepts non-negative integers. Try again." << endl;
 			}
 		}

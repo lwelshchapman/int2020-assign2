@@ -18,6 +18,12 @@
  * until the user says he or she wants to end the program (user has to type exit).
  * There are 0.3048 meters in a foot, 100 centimeters in a meter, and 12 inches in a foot.
  */
+ 
+/*
+ * Throughout this code, "inch-and-foot" measurements are simply referred to as "SAE" measurements.
+ * The same acronym ("Society of Automotive Engineers") is commonly used on tools to differentiate
+ * between metric and American measurements.
+ */
 
 #include <iostream>
 using namespace std;
@@ -36,14 +42,10 @@ void getLengthSAE(int& feet, double& inches) {
 
 void SAEtoMetric(int feet, double inches, int& meters, double& centimeters) {
 
-	double fullMeters = (feet + (inches/12)) * 0.3048;	// Combine feet & inches into one double, then convert that to metric
+	double combinedMeters = (feet + (inches/12)) * 0.3048;	// Combine feet & inches into one double, then convert that to metric
 
-	while ((fullMeters - 1) >= 0) {	// Move each whole meter out of fullMeters into meters one by one...
-		meters++;
-		fullMeters--;
-	}
-
-	centimeters = fullMeters * 100;	// ..the remaining value, multiplied by 100, gives the number of centimeters
+	meters = static_cast<int>(combinedMeters);	// Copy the whole meters into "meters"
+	centimeters = (combinedMeters - meters) * 100;	// Subtracting the whole meters from combinedMeters gives the remaining centimeters
 
 }
 

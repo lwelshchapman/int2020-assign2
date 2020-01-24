@@ -23,7 +23,7 @@ int main(int argc, char **argv) {
 	// DECLARE VARIABLES
 	const int A_X = 4;
 	const int A_Y = 5;
-	int a[A_X][A_Y];
+	int a[A_X][A_Y];	// const ints used to declare array for easier access to array's size elsewhere in program
 
 
 	// GET VALUES FROM USER
